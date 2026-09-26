@@ -1,6 +1,6 @@
 """Toy ROS 2 talker — fill in the publisher.
 
-Build/run inside the onboarding ROS container (``tools/onboarding-ros.sh``).
+Build/run inside the onboarding ROS container (``.\tools\onboarding-ros.ps1``).
 See ``onboarding/GUIDE.md`` § ROS pub/sub.
 """
 from __future__ import annotations
@@ -19,10 +19,12 @@ class Talker(Node):
         #    - topic name: "onboarding/chatter"
         #    - queue size: 10
         #    - store the handle on self._pub
+        
         # 2. Create a 1.0 second timer whose callback is self._tick
         # Look up create_publisher / create_timer in the rclpy docs or
         # another node in pipeline/ — do not copy from solutions yet.
-        raise NotImplementedError("STUDENT TODO: publisher + timer")
+
+        
         # === END TODO ===
         self._i = 0
 

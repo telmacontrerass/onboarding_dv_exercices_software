@@ -3,7 +3,7 @@
 #
 # Students should not install ROS on the host. Build + run:
 #   docker compose -f docker-compose.onboarding.yml up -d --build
-#   tools/onboarding-ros.sh
+#   .\tools\onboarding-ros.ps1
 
 FROM ros:humble-ros-base
 

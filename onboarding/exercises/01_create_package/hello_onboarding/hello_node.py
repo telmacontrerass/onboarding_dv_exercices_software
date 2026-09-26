@@ -10,13 +10,14 @@ class HelloNode(Node):
         # === STUDENT TODO ===
         # Call super().__init__ with a unique node name, e.g. "hello_onboarding".
         # Create a 1.0 s timer that calls self._tick.
-        raise NotImplementedError("STUDENT TODO: HelloNode.__init__")
+        super().__init__("hello_onboarding")
+        self.create_timer(1.0, self._tick)
         # === END TODO ===
 
     def _tick(self) -> None:
         # === STUDENT TODO ===
         # Log an info message with self.get_logger().info(...)
-        raise NotImplementedError("STUDENT TODO: HelloNode._tick")
+        self.get_logger().info("Exercise 1 from Onboarding")
         # === END TODO ===
 
 

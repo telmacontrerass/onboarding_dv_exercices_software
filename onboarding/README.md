@@ -23,7 +23,7 @@ same file paths.
 - Order: package → pub/sub → distance filter → pipeline Phase B ROS →
   perception/control toys.  
 - ROS toys (01–03) and Phase A pytest (04–07) run in
-  `docker-compose.onboarding.yml` / `tools/onboarding-ros.sh` — students
+  `docker-compose.onboarding.yml` / `tools/onboarding-ros.ps1` — students
   should not install ROS on the host.
 - Run Phase A pytest before anyone touches `pipeline/` algorithm blanks.  
 - Timebox peeks at `solutions/`.  

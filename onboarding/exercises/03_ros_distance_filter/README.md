@@ -23,13 +23,13 @@ On every incoming point `(x, y, z)`:
 Use the onboarding ROS container (see [GUIDE.md](../../GUIDE.md)):
 
 ```bash
-tools/onboarding-ros.sh
+.\tools\onboarding-ros.ps1
 cd /ws
 colcon build --symlink-install --packages-select ros_distance_filter
 source install/setup.bash
 ```
 
-Open extra terminals with `tools/onboarding-ros.sh` again.
+Open extra terminals with `.\tools\onboarding-ros.ps1` again.
 
 ```bash
 # terminal 1

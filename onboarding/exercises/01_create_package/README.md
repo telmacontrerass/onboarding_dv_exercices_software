@@ -38,7 +38,7 @@ A package named `hello_onboarding` that:
 ```bash
 # from the repo root, in a second terminal if the container is already up
 docker compose -f docker-compose.onboarding.yml up -d
-tools/onboarding-ros.sh
+.\tools\onboarding-ros.ps1
 
 # inside the container — /ws/src is this exercises/ tree
 cd /ws

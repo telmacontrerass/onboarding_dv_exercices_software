@@ -33,12 +33,12 @@ enough — it is **not** the sim stack:
 ```bash
 # from the repo root
 docker compose -f docker-compose.onboarding.yml up -d --build
-tools/onboarding-ros.sh          # interactive shell, ROS already sourced
+.\tools\onboarding-ros.ps1      # interactive shell, ROS already sourced
 ```
 
 Inside that container, `/ws` is a colcon workspace. `/ws/src` is
 bind-mounted to `onboarding/exercises/` on the host, so editor saves
-are live. Open extra terminals with `tools/onboarding-ros.sh` again
+are live. Open extra terminals with `.\tools\onboarding-ros.ps1` again
 (talker + listener, `ros2 topic echo`, …).
 
 Phase B pipeline tests (`path_planning`, `control`) still run in
@@ -114,7 +114,7 @@ Quality of Service settings control queue depth, reliability, durability. Sensor
 Fill `package.xml`, `setup.py` entry point, and `hello_node.py`. Then:
 
 ```bash
-tools/onboarding-ros.sh
+.\tools\onboarding-ros.ps1
 cd /ws
 colcon build --symlink-install --packages-select hello_onboarding
 source install/setup.bash
@@ -130,13 +130,13 @@ ros2 run hello_onboarding hello
 Complete the TODOs in `talker.py` and `listener.py` (hints describe *what*, not the exact one-liner).
 
 ```bash
-tools/onboarding-ros.sh
+.\tools\onboarding-ros.ps1
 cd /ws
 colcon build --symlink-install --packages-select ros_pubsub_exercise
 source install/setup.bash
 ```
 
-Open a second `tools/onboarding-ros.sh` shell:
+Open a second `.\tools\onboarding-ros.ps1` shell:
 
 ```bash
 ros2 run ros_pubsub_exercise talker      # terminal 1
@@ -154,7 +154,7 @@ You should see `hello N` messages. Use `ros2 topic list` / `ros2 topic echo /onb
 One node: subscribe to points, always publish distance, forward the point only if it is far enough (`min_range` parameter).
 
 ```bash
-tools/onboarding-ros.sh
+.\tools\onboarding-ros.ps1
 cd /ws
 colcon build --symlink-install --packages-select ros_distance_filter
 source install/setup.bash
@@ -183,7 +183,7 @@ Any three non-colinear points define a plane. You will need that as the **hypoth
 ### Phase A
 
 ```bash
-tools/onboarding-ros.sh bash -lc 'cd /ws/src/04_plane_from_3_points && pytest -q'
+.\tools\onboarding-ros.ps1 bash -lc 'cd /ws/src/04_plane_from_3_points && pytest -q'
 ```
 
 (Or `cd onboarding/exercises/04_plane_from_3_points && pytest -q` on the host if you already have `numpy` + `pytest`.)
@@ -215,7 +215,7 @@ Why it fits FS LiDAR: most points really are ground → a good plane quickly get
 
 ```bash
 # Finish exercise 04 first (imported by mini RANSAC).
-tools/onboarding-ros.sh bash -lc 'cd /ws/src/05_mini_ransac && pytest -q'
+.\tools\onboarding-ros.ps1 bash -lc 'cd /ws/src/05_mini_ransac && pytest -q'
 ```
 
 ### Phase B
@@ -233,7 +233,7 @@ Leave warm-start, subsample, and adaptive iteration budget alone — read them; 
 ### Phase A
 
 ```bash
-tools/onboarding-ros.sh bash -lc 'cd /ws/src/06_midpoint_path && pytest -q'
+.\tools\onboarding-ros.ps1 bash -lc 'cd /ws/src/06_midpoint_path && pytest -q'
 ```
 
 Implement `world_to_body` and `midpoint_path`. Production planning uses **FaSTTUBe**; midpoints are geometric intuition only.
@@ -279,7 +279,7 @@ We then normalize δ by the max steer angle into `[-1, 1]` for the sim/car inter
 ### Phase A
 
 ```bash
-tools/onboarding-ros.sh bash -lc 'cd /ws/src/07_pure_pursuit && pytest -q'
+.\tools\onboarding-ros.ps1 bash -lc 'cd /ws/src/07_pure_pursuit && pytest -q'
 ```
 
 ### Phase B

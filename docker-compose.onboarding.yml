@@ -2,7 +2,7 @@
 # Does not start the simulator, Mission Control, or the autonomy stack.
 #
 #   docker compose -f docker-compose.onboarding.yml up -d --build
-#   tools/onboarding-ros.sh
+#   .\tools\onboarding-ros.ps1
 #
 # `/ws/src` is bind-mounted to `onboarding/exercises/` so host edits
 # are live. colcon build/install/log live in named volumes.

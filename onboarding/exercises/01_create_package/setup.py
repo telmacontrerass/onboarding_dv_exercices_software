@@ -19,6 +19,7 @@ setup(
     entry_points={
         "console_scripts": [
             # === STUDENT TODO ===
+            "hello = hello_onboarding.hello_node:main"
             # Map executable name "hello" to hello_onboarding.hello_node:main
             # Format: "exec_name = module.path:function",
             # === END TODO ===

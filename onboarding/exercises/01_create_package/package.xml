@@ -2,7 +2,7 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <!-- === STUDENT TODO: set the package name to hello_onboarding === -->
-  <name>CHANGE_ME</name>
+  <name>hello_onboarding</name>
   <version>0.1.0</version>
   <!-- === STUDENT TODO: one-line description === -->
   <description>CHANGE_ME</description>
@@ -14,6 +14,7 @@
   <!-- === STUDENT TODO: add the runtime deps this node needs ===
        Hint: you use rclpy. You do not need std_msgs for the hello logger alone. -->
   <!-- <depend>...</depend> -->
+  <depend>rclpy</depend>
 
   <export>
     <build_type>ament_python</build_type>

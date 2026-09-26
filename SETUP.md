@@ -83,7 +83,7 @@ slim onboarding image (separate from the sim stack above):
 
 ```bash
 docker compose -f docker-compose.onboarding.yml up -d --build
-tools/onboarding-ros.sh
+.\tools\onboarding-ros.ps1
 ```
 
 That shell is a colcon workspace at `/ws` whose `src/` is
